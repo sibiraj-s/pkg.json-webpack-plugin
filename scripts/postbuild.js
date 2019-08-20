@@ -1,5 +1,5 @@
 const path = require('path');
-const fs = require('fs-extra');
+const fs = require('fs');
 const chalk = require('chalk');
 
 const targetDir = path.resolve(__dirname, '../lib');
@@ -22,7 +22,6 @@ async function copyFiles() {
     copyFileSync(paths.pkgJson);
     copyFileSync(paths.license);
     copyFileSync(paths.readMe);
-    fs.copySync(paths.assets, path.resolve(targetDir, 'assets'));
   } catch (err) {
     throw new Error(err);
   }
