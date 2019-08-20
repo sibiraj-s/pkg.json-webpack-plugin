@@ -2,11 +2,11 @@
 
 > Loads package.json into webpack app as an environment variable
 
-<div align="center">
+<p align="center">
   <a href="https://github.com/sibiraj-s/pkg.json-webpack-plugin">
     <img width="200" height="200" src="./assets/webpack.svg">
   </a>
-  </div>
+</p>
 
 ## Getting Started
 
