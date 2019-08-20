@@ -8,7 +8,6 @@ const paths = {};
 paths.pkgJson = path.resolve(__dirname, '../package.json');
 paths.license = path.resolve(__dirname, '../LICENSE');
 paths.readMe = path.resolve(__dirname, '../README.md');
-paths.assets = path.resolve(__dirname, '../assets/');
 
 function copyFileSync(filePath) {
   const filename = path.basename(filePath);
@@ -21,6 +20,7 @@ async function copyFiles() {
   try {
     copyFileSync(paths.pkgJson);
     copyFileSync(paths.license);
+    copyFileSync(paths.readMe);
     copyFileSync(paths.readMe);
   } catch (err) {
     throw new Error(err);
