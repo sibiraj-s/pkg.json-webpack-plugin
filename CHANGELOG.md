@@ -14,6 +14,12 @@ All notable changes to this project will be documented in this file.
 > - Internal
 > - Unreleased
 
+## v1.0.2 (2019-08-20)
+
+#### Internal
+
+- remove assets published to npm, reverts [v1.0.1](https://github.com/sibiraj-s/pkg.json-webpack-plugin/blob/master/CHANGELOG.md#v101-2019-08-20)
+
 ## v1.0.1 (2019-08-20)
 
 #### Internal
