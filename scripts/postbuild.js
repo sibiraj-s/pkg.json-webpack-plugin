@@ -1,5 +1,5 @@
 const path = require('path');
-const fs = require('fs');
+const fs = require('fs-extra');
 const chalk = require('chalk');
 
 const targetDir = path.resolve(__dirname, '../lib');
@@ -8,6 +8,7 @@ const paths = {};
 paths.pkgJson = path.resolve(__dirname, '../package.json');
 paths.license = path.resolve(__dirname, '../LICENSE');
 paths.readMe = path.resolve(__dirname, '../README.md');
+paths.assets = path.resolve(__dirname, '../assets/');
 
 function copyFileSync(filePath) {
   const filename = path.basename(filePath);
@@ -21,6 +22,7 @@ async function copyFiles() {
     copyFileSync(paths.pkgJson);
     copyFileSync(paths.license);
     copyFileSync(paths.readMe);
+    fs.copySync(paths.assets, path.resolve(targetDir, 'assets'));
   } catch (err) {
     throw new Error(err);
   }
