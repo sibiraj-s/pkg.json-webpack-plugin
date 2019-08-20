@@ -14,6 +14,12 @@ All notable changes to this project will be documented in this file.
 > - Internal
 > - Unreleased
 
+## v1.0.1 (2019-08-20)
+
+#### Internal
+
+- publish assets to npm ([62ea97c](https://github.com/sibiraj-s/pkg.json-webpack-plugin/commit/62ea97c))
+
 ## v1.0.0 (2019-08-20)
 
 #### Features

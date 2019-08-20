@@ -1,6 +1,6 @@
 {
   "name": "pkg.json-webpack-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Loads package.json into webpack app as an environment variable",
   "author": "sibiraj-s",
   "license": "MIT",
