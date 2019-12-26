@@ -1,5 +1,4 @@
-import * as _ from 'lodash';
-import * as webpack from 'webpack';
+import webpack from 'webpack';
 
 import readPkgJson, { IOptions } from './readPkgjson';
 
