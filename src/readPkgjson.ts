@@ -1,5 +1,5 @@
-import * as _ from 'lodash';
-import * as readPkg from 'read-pkg';
+import _ from 'lodash';
+import readPkg from 'read-pkg';
 
 export interface IOptions {
   key?: string;
@@ -8,7 +8,7 @@ export interface IOptions {
   include?: string[];
 }
 
-export const defaultOptions: IOptions = {
+const defaultOptions: IOptions = {
   include: [],
   key: 'pkgJson',
   normalize: true,
@@ -26,12 +26,12 @@ function readPkgJson(pluginOptions: IOptions = defaultOptions) {
       normalize: options.normalize,
     });
   } catch (err) {
-    throw Error(err);
+    throw new Error(err);
   }
 
   if (options.include && !_.isEmpty(pkgJson) && !_.isEmpty(options.include)) {
     if (!_.isArray(options.include)) {
-      throw Error('inlucde should be array of string');
+      throw new TypeError('options `inlucde` should be array of strings');
     }
     pkgJson = _.pick(pkgJson, options.include);
   }
