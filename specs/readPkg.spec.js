@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import normalizePackageData from 'normalize-package-data';
 
-import readPkgJson from '../src/readPkgjson';
+import readPkgJson from '../src/readPkgJson';
 import appPackageJson from '../package.json';
 
 const normalizedPkgJson = _.merge({}, appPackageJson);
