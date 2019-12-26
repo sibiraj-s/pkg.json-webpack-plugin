@@ -17,9 +17,9 @@
     "plugins"
   ],
   "scripts": {
-    "postbuild": "node ./scripts/postbuild.js",
-    "prebuild": "node ./scripts/prebuild.js",
+    "prebuild": "gulp clean",
     "build": "tsc",
+    "postbuild": "gulp prepareLib",
     "test": "jest",
     "prepublishOnly": "node ./scripts/prepublish.js",
     "prerelease": "npm run test",
@@ -41,7 +41,7 @@
     "@types/webpack": "^4.41.0",
     "babel-jest": "^24.9.0",
     "chalk": "^3.0.0",
-    "fs-extra": "^8.1.0",
+    "gulp": "^4.0.2",
     "husky": "^3.1.0",
     "jest": "^24.9.0",
     "lint-staged": "^9.5.0",
