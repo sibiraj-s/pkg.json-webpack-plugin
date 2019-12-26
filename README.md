@@ -1,4 +1,4 @@
-# pkg.json-webpack-plugin [![Build Status](https://travis-ci.com/sibiraj-s/pkg.json-webpack-plugin.svg?branch=master)](https://travis-ci.com/sibiraj-s/pkg.json-webpack-plugin)
+# pkg.json-webpack-plugin [![Tests](https://github.com/sibiraj-s/pkg.json-webpack-plugin/workflows/Tests/badge.svg)](https://github.com/sibiraj-s/pkg.json-webpack-plugin/actions)
 
 > Loads package.json into webpack app as an environment variable
 
