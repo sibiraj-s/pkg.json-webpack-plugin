@@ -9,5 +9,4 @@ class PackgaeJsonWebpackPlugin {
   }
 }
 
-export default PackgaeJsonWebpackPlugin;
-module.exports = exports.default;
+export = PackgaeJsonWebpackPlugin;
