@@ -20,7 +20,7 @@
     "prebuild": "gulp clean",
     "build": "tsc",
     "postbuild": "gulp prepareLib",
-    "test": "jest",
+    "test": "jest --runInBand",
     "prepublishOnly": "node ./scripts/prepublish.js",
     "prerelease": "npm run test",
     "release": "sh ./scripts/release.sh"
