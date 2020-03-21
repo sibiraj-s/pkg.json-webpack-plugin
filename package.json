@@ -33,23 +33,23 @@
     "read-pkg": "^5.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.3",
-    "@babel/preset-env": "^7.8.3",
-    "@types/jest": "^24.9.1",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@types/jest": "^25.1.4",
     "@types/lodash": "^4.14.149",
-    "@types/webpack": "^4.41.3",
+    "@types/webpack": "^4.41.8",
     "babel-jest": "^25.1.0",
     "chalk": "^3.0.0",
     "gulp": "^4.0.2",
-    "husky": "^4.2.1",
+    "husky": "^4.2.3",
     "jest": "^25.1.0",
-    "lint-staged": "^9.5.0",
+    "lint-staged": "^10.0.8",
     "normalize-package-data": "^2.5.0",
     "prettier": "^1.19.1",
-    "ts-jest": "^25.0.0",
-    "tslint": "^6.0.0",
+    "ts-jest": "^25.2.1",
+    "tslint": "^6.1.0",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.7.5",
-    "webpack": "^4.41.5"
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.0"
   }
 }
