@@ -1,6 +1,6 @@
 const path = require('path');
 
-module.exports = function(options = {}) {
+module.exports = (options = {}) => {
   const plugins = options.plugins || [];
 
   return {

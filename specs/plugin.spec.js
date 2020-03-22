@@ -2,13 +2,13 @@ import path from 'path';
 import fs from 'fs';
 import webpack from 'webpack';
 
-import PackageJsonWebpackPlugin from '../src';
+import PackageJsonWebpackPlugin from '../src/index.ts';
 import webpackConfig from './fixtures/webpack.config';
 import pkgJson from '../package.json';
 
 const rootDir = path.resolve(__dirname, '..');
 
-test(`the plugin should load without any errors with default options`, done => {
+test('the plugin should load without any errors with default options', (done) => {
   const plugins = [new PackageJsonWebpackPlugin()];
   const config = webpackConfig({ plugins });
 
@@ -20,7 +20,7 @@ test(`the plugin should load without any errors with default options`, done => {
   });
 });
 
-test(`the plugin should load without any errors with custom options`, done => {
+test('the plugin should load without any errors with custom options', (done) => {
   const plugins = [new PackageJsonWebpackPlugin({ key: 'appPkgJson' })];
   const config = webpackConfig({ plugins });
 
@@ -32,7 +32,7 @@ test(`the plugin should load without any errors with custom options`, done => {
   });
 });
 
-test(`the webpack config should be initialized correctly with no options`, done => {
+test('the webpack config should be initialized correctly with no options', (done) => {
   const config = webpackConfig();
 
   webpack(config, (err, stats) => {
@@ -43,7 +43,7 @@ test(`the webpack config should be initialized correctly with no options`, done 
   });
 });
 
-test(`the plugin should load the data correctly`, done => {
+test('the plugin should load the data correctly', (done) => {
   const options = {
     key: 'appPkgJson',
     rootDir,
@@ -61,14 +61,14 @@ test(`the plugin should load the data correctly`, done => {
 
     fs.promises
       .readFile(outFile, 'utf-8')
-      .then(output => {
+      .then((output) => {
         expect(output).toContain(pkgJson.name);
         expect(output).toContain(pkgJson.version);
         expect(output).toContain(pkgJson.desctiption);
         done();
       })
-      .catch(err => {
-        done(err);
+      .catch((e) => {
+        done(e);
       });
   });
 });

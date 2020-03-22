@@ -23,7 +23,8 @@
     "test": "jest --runInBand",
     "prepublishOnly": "node ./scripts/prepublish.js",
     "prerelease": "npm run test",
-    "release": "sh ./scripts/release.sh"
+    "release": "sh ./scripts/release.sh",
+    "lint": "eslint . --fix --ignore-path .gitignore --ext .js,.ts"
   },
   "peerDependencies": {
     "webpack": ">= 4"
@@ -38,8 +39,13 @@
     "@types/jest": "^25.1.4",
     "@types/lodash": "^4.14.149",
     "@types/webpack": "^4.41.8",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
     "babel-jest": "^25.1.0",
     "chalk": "^3.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
     "gulp": "^4.0.2",
     "husky": "^4.2.3",
     "jest": "^25.1.0",
@@ -47,8 +53,6 @@
     "normalize-package-data": "^2.5.0",
     "prettier": "^1.19.1",
     "ts-jest": "^25.2.1",
-    "tslint": "^6.1.0",
-    "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.8.3",
     "webpack": "^4.42.0"
   }

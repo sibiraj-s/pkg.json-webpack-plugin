@@ -1,9 +1,9 @@
 import webpack from 'webpack';
 
-import readPkgJson, { IOptions } from './readPkgJson';
+import readPkgJson, { Options } from './readPkgJson';
 
 class PackgaeJsonWebpackPlugin {
-  constructor(pluginOptions: IOptions = {}) {
+  constructor(pluginOptions: Options = {}) {
     const { pkgJson, key } = readPkgJson(pluginOptions);
     return new webpack.EnvironmentPlugin({ [key as string]: pkgJson });
   }

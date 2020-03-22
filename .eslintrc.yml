@@ -1,0 +1,29 @@
+overrides:
+  - files:
+     - '*.js'
+    extends:
+      - airbnb-base
+    rules:
+      max-len:
+        - error
+        - code: 120
+
+  - files:
+      - '**/*.ts'
+    parser: '@typescript-eslint/parser'
+    plugins:
+      - '@typescript-eslint'
+    extends:
+      - eslint:recommended
+      - plugin:@typescript-eslint/eslint-recommended
+      - plugin:@typescript-eslint/recommended
+
+  - files:
+      - 'scripts/**/*.js'
+    rules:
+      import/no-extraneous-dependencies: off
+      no-console: off
+
+env:
+  jest: true
+  node: true

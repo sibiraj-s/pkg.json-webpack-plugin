@@ -1,24 +1,29 @@
 import _ from 'lodash';
 import readPkg from 'read-pkg';
 
-export interface IOptions {
+export interface Options {
   key?: string;
   rootDir?: string;
   normalize?: boolean;
   include?: string[];
 }
 
-const defaultOptions: IOptions = {
+interface ReadPkgJsonResult {
+  pkgJson: object;
+  key?: string;
+}
+
+const defaultOptions: Options = {
   include: [],
   key: 'pkgJson',
   normalize: true,
   rootDir: process.cwd(),
 };
 
-function readPkgJson(pluginOptions: IOptions = defaultOptions) {
+function readPkgJson(pluginOptions: Options = defaultOptions): ReadPkgJsonResult {
   let pkgJson: string | object;
 
-  const options: IOptions = _.defaults(pluginOptions, defaultOptions);
+  const options: Options = _.defaults(pluginOptions, defaultOptions);
 
   try {
     pkgJson = readPkg.sync({

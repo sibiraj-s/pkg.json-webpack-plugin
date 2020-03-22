@@ -1,2 +1,8 @@
-"*.{js,ts,json,md}":
+"*.{json,md}":
   - prettier --write
+
+"*.js":
+  - eslint --fix --ignore-path .gitignore
+
+"*.ts":
+  - eslint --fix --ignore-path .gitignore --ext .ts
