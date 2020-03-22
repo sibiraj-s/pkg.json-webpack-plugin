@@ -23,8 +23,7 @@
     "test": "jest --runInBand",
     "prepublishOnly": "node ./scripts/prepublish.js",
     "prerelease": "npm run test",
-    "release": "sh ./scripts/release.sh",
-    "lint": "eslint . --fix --ignore-path .gitignore --ext .js,.ts"
+    "release": "sh ./scripts/release.sh"
   },
   "peerDependencies": {
     "webpack": ">= 4"
