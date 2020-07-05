@@ -1,8 +1,9 @@
 overrides:
   - files:
-     - '*.js'
+      - '*.js'
     extends:
       - airbnb-base
+      - pegasus
     rules:
       max-len:
         - error
@@ -17,6 +18,7 @@ overrides:
       - eslint:recommended
       - plugin:@typescript-eslint/eslint-recommended
       - plugin:@typescript-eslint/recommended
+      - pegasus
 
   - files:
       - 'scripts/**/*.js'
