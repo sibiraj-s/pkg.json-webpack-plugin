@@ -8,8 +8,11 @@ export interface Options {
   include?: string[];
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type PkgJson = { [key: string]: any } 
+
 interface ReadPkgJsonResult {
-  pkgJson: object;
+  pkgJson: PkgJson;
   key?: string;
 }
 
@@ -21,7 +24,7 @@ const defaultOptions: Options = {
 };
 
 function readPkgJson(pluginOptions: Options = defaultOptions): ReadPkgJsonResult {
-  let pkgJson: string | object;
+  let pkgJson: PkgJson;
 
   const options: Options = _.defaults(pluginOptions, defaultOptions);
 
