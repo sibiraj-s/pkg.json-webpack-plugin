@@ -14,6 +14,17 @@ All notable changes to this project will be documented in this file.
 > - Internal
 > - Unreleased
 
+## v1.1.0 (2020-07-19)
+
+#### Features
+
+- add schema validation ([fe9eabc](https://github.com/sibiraj-s/pkg.json-webpack-plugin/commit/fe9eabc))
+- update loadash to v4.17.19 to fix vulnerability ([541ed98](https://github.com/sibiraj-s/pkg.json-webpack-plugin/commit/541ed98))
+
+#### Dependency Updates
+
+- update dependencies and devDependencies ([541ed98](https://github.com/sibiraj-s/pkg.json-webpack-plugin/commit/541ed98))
+
 ## v1.0.3 (2019-12-28)
 
 #### Internal
