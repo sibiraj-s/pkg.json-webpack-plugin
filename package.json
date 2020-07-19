@@ -23,7 +23,7 @@
     "postbuild": "gulp prepareLib",
     "test": "jest --runInBand",
     "prepublishOnly": "node ./scripts/prepublish.js",
-    "prerelease": "npm run test",
+    "prerelease": "npm run test && npm run build",
     "release": "sh ./scripts/release.sh"
   },
   "peerDependencies": {
