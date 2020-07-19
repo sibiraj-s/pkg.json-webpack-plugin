@@ -30,7 +30,7 @@ module.exports = {
 ```
 
 ```js
-console.log(process.env.pkgJson.version); // prints `1.0.0`
+console.log(process.env.pkgJson.version); // > 1.0.0
 ```
 
 the plugin uses [EnvironmentPlugin](https://webpack.js.org/plugins/environment-plugin/) under the hood to load the values, refer the docs to know how it works
