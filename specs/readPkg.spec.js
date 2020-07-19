@@ -18,10 +18,6 @@ it('should throw error if file is not found', () => {
   expect(() => readPkgJson({ rootDir: __dirname })).toThrow(Error);
 });
 
-it('should throw TypeError if include option is not an array', () => {
-  expect(() => readPkgJson({ include: 'name' })).toThrow(TypeError);
-});
-
 it('should return raw package.json when \'normalize\' is set to \'false\'', () => {
   const { pkgJson } = readPkgJson({ normalize: false });
   expect(pkgJson).toEqual(appPackageJson);

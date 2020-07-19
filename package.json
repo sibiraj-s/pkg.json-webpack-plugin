@@ -31,7 +31,8 @@
   },
   "dependencies": {
     "lodash": "^4.17.19",
-    "read-pkg": "^5.2.0"
+    "read-pkg": "^5.2.0",
+    "schema-utils": "^2.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",

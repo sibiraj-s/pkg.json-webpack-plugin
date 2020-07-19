@@ -38,9 +38,6 @@ function readPkgJson(pluginOptions: Options = defaultOptions): ReadPkgJsonResult
   }
 
   if (options.include && !_.isEmpty(pkgJson) && !_.isEmpty(options.include)) {
-    if (!_.isArray(options.include)) {
-      throw new TypeError('options `inlucde` should be array of strings');
-    }
     pkgJson = _.pick(pkgJson, options.include);
   }
 
