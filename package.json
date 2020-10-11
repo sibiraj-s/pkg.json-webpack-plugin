@@ -9,7 +9,7 @@
   "bugs": "https://github.com/sibiraj-s/pkg.json-webpack-plugin/issues",
   "homepage": "https://github.com/sibiraj-s/pkg.json-webpack-plugin",
   "engines": {
-    "node": ">= 8"
+    "node": ">= 10.13"
   },
   "keywords": [
     "package.json",
