@@ -48,5 +48,5 @@ test('the plugin should load the data correctly', async () => {
   const output = await fs.promises.readFile(outFile, 'utf-8');
   expect(output).toContain(pkgJson.name);
   expect(output).toContain(pkgJson.version);
-  expect(output).toContain(pkgJson.desctiption);
+  expect(output).toContain(pkgJson.description);
 });
