@@ -9,7 +9,7 @@ export interface Options {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-type PkgJson = { [key: string]: any } 
+type PkgJson = { [key: string]: any }
 
 interface ReadPkgJsonResult {
   pkgJson: PkgJson;
@@ -23,7 +23,7 @@ const defaultOptions: Options = {
   rootDir: process.cwd(),
 };
 
-function readPkgJson(pluginOptions: Options = defaultOptions): ReadPkgJsonResult {
+const readPkgJson = (pluginOptions: Options = defaultOptions): ReadPkgJsonResult => {
   let pkgJson: PkgJson;
 
   const options: Options = _.defaults(pluginOptions, defaultOptions);
@@ -42,6 +42,6 @@ function readPkgJson(pluginOptions: Options = defaultOptions): ReadPkgJsonResult
   }
 
   return { pkgJson, key: options.key };
-}
+};
 
 export default readPkgJson;
