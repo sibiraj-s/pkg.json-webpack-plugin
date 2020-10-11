@@ -14,6 +14,17 @@ All notable changes to this project will be documented in this file.
 > - Internal
 > - Unreleased
 
+## v2.0.0 (2020-10-11)
+
+#### Features
+
+- support webpack 5 ([fe9eabc](https://github.com/sibiraj-s/pkg.json-webpack-plugin/commit/fe9eabc))
+
+#### Breaking Changes
+
+- minimum required node version is v10.13
+- drop webpack 4 support
+
 ## v1.1.0 (2020-07-19)
 
 #### Features
