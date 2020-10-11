@@ -1,5 +1,5 @@
 import webpack from 'webpack';
-import validate from 'schema-utils';
+import {validate} from 'schema-utils';
 
 import schema from './schema';
 import readPkgJson, { Options } from './readPkgJson';
