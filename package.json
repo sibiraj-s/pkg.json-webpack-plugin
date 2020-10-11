@@ -30,7 +30,7 @@
     "webpack": ">= 4"
   },
   "dependencies": {
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.20",
     "read-pkg": "^5.2.0",
     "schema-utils": "^3.0.0"
   },
