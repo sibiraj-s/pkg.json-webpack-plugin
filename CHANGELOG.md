@@ -14,6 +14,12 @@ All notable changes to this project will be documented in this file.
 > - Internal
 > - Unreleased
 
+## v2.0.1 (2020-12-14)
+
+#### Internal
+
+- update LICENSE ([3618cdc](https://github.com/sibiraj-s/pkg.json-webpack-plugin/commit/3618cdc))
+
 ## v2.0.0 (2020-10-11)
 
 #### Features
