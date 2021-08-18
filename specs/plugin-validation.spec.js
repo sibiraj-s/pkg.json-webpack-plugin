@@ -1,3 +1,4 @@
+import { ValidationError } from 'schema-utils';
 import PackageJsonWebpackPlugin from '../src/index.ts';
 import getCompiler from './helpers/getCompiler';
 
@@ -17,7 +18,7 @@ const tests = [
       options: {
         include: ['name', ''],
       },
-      expectedErrMessage: 'include[1] should be an non-empty string',
+      expectedErrMessage: 'include\\[1\\] should be a non-empty string',
     },
   ],
   [
@@ -26,7 +27,7 @@ const tests = [
       options: {
         include: ['name', true],
       },
-      expectedErrMessage: 'include[1] should be a non-empty string',
+      expectedErrMessage: 'include\\[1\\] should be a non-empty string',
     },
   ],
   [
@@ -59,12 +60,11 @@ const tests = [
 ];
 
 test.each(tests)('should throw schema validation error if %s', (_, { options, expectedErrMessage }) => {
-  try {
+  const t = () => {
     const compiler = getCompiler();
     new PackageJsonWebpackPlugin(options).apply(compiler);
-  } catch (err) {
-    expect(err).toBeTruthy();
-    expect(err.name).toBe('ValidationError');
-    expect(err.message).toContain(expectedErrMessage);
-  }
+  };
+
+  expect(t).toThrow(ValidationError);
+  expect(t).toThrowWithMessage(Error, new RegExp(expectedErrMessage));
 });
