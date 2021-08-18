@@ -1,4 +1,4 @@
-import { Compiler, EnvironmentPlugin } from 'webpack';
+import { Compiler, EnvironmentPlugin, WebpackPluginInstance } from 'webpack';
 import { validate } from 'schema-utils';
 
 import schema from './schema';
@@ -6,7 +6,7 @@ import readPkgJson, { Options } from './readPkgJson';
 
 const PLUGIN_NAME = 'PackgaeJsonPlugin';
 
-class PackgaeJsonWebpackPlugin {
+class PackgaeJsonWebpackPlugin implements WebpackPluginInstance {
   pluginOptions: Options = {}
 
   constructor(pluginOptions: Options = {}) {
