@@ -6,7 +6,7 @@ const gulp = require('gulp');
 const outDir = path.resolve(__dirname, 'lib');
 
 const cleanOutDir = async () => {
-  await fs.promises.rmdir(outDir, { recursive: true });
+  await fs.promises.rm(outDir, { recursive: true, force: true });
 };
 
 const copyFiles = () => {
