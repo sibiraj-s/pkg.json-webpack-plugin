@@ -34,7 +34,11 @@ const readPkgJson = (pluginOptions: Options = defaultOptions): ReadPkgJsonResult
       normalize: options.normalize,
     });
   } catch (err) {
-    throw new Error(err);
+    if (err instanceof Error) {
+      throw err;
+    }
+
+    throw new Error(err as any);
   }
 
   if (options.include && !_.isEmpty(pkgJson) && !_.isEmpty(options.include)) {
