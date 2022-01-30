@@ -22,9 +22,6 @@
     "build": "tsc",
     "postbuild": "gulp prepareLib",
     "test": "jest",
-    "prepublishOnly": "node ./scripts/prepublish.js",
-    "prerelease": "npm run test && npm run build",
-    "release": "sh ./scripts/release.sh",
     "prepare": "is-ci || husky install"
   },
   "peerDependencies": {
@@ -45,7 +42,6 @@
     "@typescript-eslint/eslint-plugin": "^5.10.1",
     "@typescript-eslint/parser": "^5.10.1",
     "babel-jest": "^27.4.6",
-    "chalk": "^4.1.2",
     "eslint": "^8.8.0",
     "eslint-config-pegasus": "^3.2.0",
     "gulp": "^4.0.2",
