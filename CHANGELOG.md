@@ -14,6 +14,18 @@ All notable changes to this project will be documented in this file.
 > - Internal
 > - Unreleased
 
+## v2.0.2 (2022-01-30)
+
+#### Dependency Updates
+
+- update schema-utils to v4 ([73a5b26](https://github.com/sibiraj-s/pkg.json-webpack-plugin/commit/73a5b26))
+- update devDependencies ([2fe1378](https://github.com/sibiraj-s/pkg.json-webpack-plugin/commit/2fe1378))
+
+#### Internal
+
+- update @actions/setup-node to v2 ([bdef0fa](https://github.com/sibiraj-s/pkg.json-webpack-plugin/commit/bdef0fa))
+- update to node16/npm7 ([333714a](https://github.com/sibiraj-s/pkg.json-webpack-plugin/commit/333714a))
+
 ## v2.0.1 (2020-12-14)
 
 #### Internal
