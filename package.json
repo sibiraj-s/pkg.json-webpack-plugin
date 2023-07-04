@@ -52,6 +52,7 @@
     "lint-staged": "^13.2.3",
     "normalize-package-data": "^5.0.0",
     "prettier": "^2.8.8",
+    "publint": "^0.1.15",
     "ts-jest": "^29.1.1",
     "typescript": "^5.1.6",
     "webpack": "^5.88.1"
