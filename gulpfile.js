@@ -1,31 +1,32 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'node:fs/promises';
+import path from 'node:path';
 
-const gulp = require('gulp');
+import { src, dest, series } from 'gulp';
 
-const outDir = path.resolve(__dirname, 'lib');
+const outDir = path.resolve(import.meta.dirname, 'lib');
 
 const cleanOutDir = async () => {
-  await fs.promises.rm(outDir, { recursive: true, force: true });
+  await fs.rm(outDir, { recursive: true, force: true });
 };
 
 const copyFiles = () => {
-  return gulp.src(['README.md', 'CHANGELOG.md', 'LICENSE', 'package.json']).pipe(gulp.dest(outDir));
+  return src(['README.md', 'CHANGELOG.md', 'LICENSE', 'package.json']).pipe(dest(outDir));
 };
 
 const preparePackageJson = async () => {
   const targetPkgJsonPath = path.resolve(outDir, 'package.json');
-  const pkgJsonStr = await fs.promises.readFile(targetPkgJsonPath, 'utf-8');
+  const pkgJsonStr = await fs.readFile(targetPkgJsonPath, 'utf-8');
   const pkgJson = JSON.parse(pkgJsonStr);
 
-  pkgJson.main = 'index.js';
-  pkgJson.types = 'index.d.ts';
+  pkgJson.main = 'index.cjs';
+  pkgJson.types = 'index.d.cts';
+  delete pkgJson.module;
   delete pkgJson.scripts;
   delete pkgJson.devDependencies;
   delete pkgJson.private;
 
-  await fs.promises.writeFile(targetPkgJsonPath, JSON.stringify(pkgJson, null, 2), 'utf-8');
+  await fs.writeFile(targetPkgJsonPath, JSON.stringify(pkgJson, null, 2), 'utf-8');
 };
 
-exports.clean = cleanOutDir;
-exports.prepareLib = gulp.series(copyFiles, preparePackageJson);
+export const clean = cleanOutDir;
+export const prepareLib = series(copyFiles, preparePackageJson);

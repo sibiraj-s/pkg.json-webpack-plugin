@@ -1,8 +1,16 @@
+import { expect, test } from 'vitest';
 import { ValidationError } from 'schema-utils';
-import PackageJsonWebpackPlugin from '../src/index.ts';
-import getCompiler from './helpers/getCompiler';
 
-const tests = [
+import PackageJsonWebpackPlugin from '../src/index.ts';
+import getCompiler from './helpers/getCompiler.js';
+
+type TestCaseOptions = {
+  options: Record<string, unknown>,
+  expectedErrMessage: string
+}
+type TestCase = [string, TestCaseOptions]
+
+const tests: TestCase[] = [
   [
     'include is not an array',
     {

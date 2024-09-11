@@ -38,6 +38,7 @@ const readPkgJson = (pluginOptions: Options = defaultOptions): ReadPkgJsonResult
       throw err;
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     throw new Error(err as any);
   }
 

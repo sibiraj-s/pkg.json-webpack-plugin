@@ -5,7 +5,8 @@
   "author": "sibiraj-s",
   "license": "MIT",
   "private": true,
-  "repository": "https://github.com/sibiraj-s/pkg.json-webpack-plugin.git",
+  "type": "module",
+  "repository": "github:sibiraj-s/pkg.json-webpack-plugin",
   "bugs": "https://github.com/sibiraj-s/pkg.json-webpack-plugin/issues",
   "homepage": "https://github.com/sibiraj-s/pkg.json-webpack-plugin",
   "engines": {
@@ -19,10 +20,10 @@
   "scripts": {
     "lint": "eslint . --ignore-path .gitignore",
     "prebuild": "gulp clean",
-    "build": "tsc",
+    "build": "tsup",
     "postbuild": "gulp prepareLib",
-    "test": "jest",
-    "prepare": "is-ci || husky install"
+    "test": "vitest",
+    "prepare": "is-ci || husky"
   },
   "peerDependencies": {
     "webpack": "^5.0.0"
@@ -33,28 +34,24 @@
     "schema-utils": "^4.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.6",
-    "@babel/preset-env": "^7.22.6",
-    "@commitlint/cli": "^17.6.6",
-    "@commitlint/config-conventional": "^17.6.6",
-    "@types/jest": "^29.5.2",
-    "@types/lodash": "^4.14.195",
-    "@typescript-eslint/eslint-plugin": "^5.61.0",
-    "@typescript-eslint/parser": "^5.61.0",
-    "babel-jest": "^29.5.0",
-    "eslint": "^8.44.0",
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@types/lodash": "^4.17.7",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.0",
     "eslint-config-pegasus": "^4.0.0",
     "gulp": "^5.0.0",
-    "husky": "^8.0.3",
+    "husky": "^9.1.5",
     "is-ci": "^3.0.1",
-    "jest": "^29.5.0",
-    "jest-extended": "^4.0.0",
-    "lint-staged": "^13.2.3",
-    "normalize-package-data": "^5.0.0",
-    "prettier": "^2.8.8",
-    "publint": "^0.1.15",
-    "ts-jest": "^29.1.1",
-    "typescript": "^5.1.6",
-    "webpack": "^5.88.1"
+    "jest-extended": "^4.0.2",
+    "lint-staged": "^15.2.10",
+    "normalize-package-data": "^6.0.2",
+    "prettier": "^3.3.3",
+    "publint": "^0.2.10",
+    "tsup": "^8.2.4",
+    "typescript": "^5.6.2",
+    "vitest": "^2.0.5",
+    "webpack": "^5.94.0"
   }
 }

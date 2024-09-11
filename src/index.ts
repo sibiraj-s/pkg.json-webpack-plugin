@@ -7,7 +7,7 @@ import readPkgJson, { Options } from './readPkgJson';
 const PLUGIN_NAME = 'PackgaeJsonPlugin';
 
 class PackgaeJsonWebpackPlugin implements WebpackPluginInstance {
-  pluginOptions: Options = {}
+  pluginOptions: Options = {};
 
   constructor(pluginOptions: Options = {}) {
     validate(schema, pluginOptions, {
@@ -20,7 +20,7 @@ class PackgaeJsonWebpackPlugin implements WebpackPluginInstance {
 
   apply(compiler: Compiler) {
     const { pkgJson, key } = readPkgJson(this.pluginOptions);
-    new EnvironmentPlugin({ [key as string]: pkgJson }).apply(compiler);
+    new EnvironmentPlugin({ [key as string]: JSON.stringify(pkgJson) }).apply(compiler);
   }
 }
 

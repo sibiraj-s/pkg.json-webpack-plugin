@@ -1,7 +1,8 @@
+import { beforeAll, expect, it } from 'vitest';
 import _ from 'lodash';
 import normalizePackageData from 'normalize-package-data';
 
-import readPkgJson from '../src/readPkgJson.ts';
+import readPkgJson from '../src/readPkgJson';
 import appPackageJson from '../package.json';
 
 const normalizedPkgJson = _.merge({}, appPackageJson);
@@ -15,7 +16,7 @@ it('should return normalized package.json correctly', () => {
 });
 
 it('should throw error if file is not found', () => {
-  expect(() => readPkgJson({ rootDir: __dirname })).toThrow(Error);
+  expect(() => readPkgJson({ rootDir: import.meta.dirname })).toThrow(Error);
 });
 
 it('should return raw package.json when \'normalize\' is set to \'false\'', () => {

@@ -1,5 +1,5 @@
-const path = require('path');
-const webpack = require('webpack');
+import path from 'node:path';
+import webpack from 'webpack';
 
 const fixturesDir = path.resolve(__dirname, '..', 'fixtures');
 

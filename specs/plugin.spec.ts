@@ -1,5 +1,6 @@
 import path from 'path';
 import fs from 'fs';
+import { expect, test } from 'vitest';
 
 import PackageJsonWebpackPlugin from '../src/index.ts';
 import pkgJson from '../package.json';
