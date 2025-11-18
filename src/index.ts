@@ -24,4 +24,4 @@ class PackgaeJsonWebpackPlugin implements WebpackPluginInstance {
   }
 }
 
-export = PackgaeJsonWebpackPlugin;
+export default PackgaeJsonWebpackPlugin;

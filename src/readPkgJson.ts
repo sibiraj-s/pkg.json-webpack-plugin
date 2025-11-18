@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import readPkg from 'read-pkg';
+import { readPackageSync } from 'read-pkg';
 
 export interface Options {
   key?: string;
@@ -8,7 +8,6 @@ export interface Options {
   include?: string[];
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type PkgJson = { [key: string]: any }
 
 interface ReadPkgJsonResult {
@@ -29,7 +28,7 @@ const readPkgJson = (pluginOptions: Options = defaultOptions): ReadPkgJsonResult
   const options: Options = _.defaults(pluginOptions, defaultOptions);
 
   try {
-    pkgJson = readPkg.readPackageSync({
+    pkgJson = readPackageSync({
       cwd: options.rootDir,
       normalize: options.normalize,
     });
@@ -38,7 +37,6 @@ const readPkgJson = (pluginOptions: Options = defaultOptions): ReadPkgJsonResult
       throw err;
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     throw new Error(err as any);
   }
 

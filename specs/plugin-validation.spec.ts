@@ -70,6 +70,10 @@ const tests: TestCase[] = [
 test.each(tests)('should throw schema validation error if %s', (_, { options, expectedErrMessage }) => {
   const t = () => {
     const compiler = getCompiler();
+    if (!compiler) {
+      throw new Error('Compiler not initialized');
+    }
+
     new PackageJsonWebpackPlugin(options).apply(compiler);
   };
 
