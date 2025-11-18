@@ -29,7 +29,7 @@ const readPkgJson = (pluginOptions: Options = defaultOptions): ReadPkgJsonResult
   const options: Options = _.defaults(pluginOptions, defaultOptions);
 
   try {
-    pkgJson = readPkg.sync({
+    pkgJson = readPkg.readPackageSync({
       cwd: options.rootDir,
       normalize: options.normalize,
     });
