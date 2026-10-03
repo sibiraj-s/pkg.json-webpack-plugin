@@ -1,7 +1,7 @@
 name: NPM Publish
 
 env:
-  NODE_VERSION: 20
+  NODE_VERSION: 24
 
 on:
   push:
@@ -22,6 +22,4 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-      - run: npm publish lib/ --provenance
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      - run: npm stage publish lib/
